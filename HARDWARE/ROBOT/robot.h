@@ -5,7 +5,7 @@
 #include "systick.h"
 #include "motor.h"
 
-#define dlytime 1000 
+#define dlytime 800
 
 
 

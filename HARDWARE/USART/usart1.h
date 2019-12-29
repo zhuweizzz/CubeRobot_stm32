@@ -18,7 +18,10 @@
 
 
 extern u8 USART1_RX_BUF[USART_REC_LEN];
-extern u16 USART1_RX_STA;
+extern u16 USART1_RX_STA; 
+//bit15 接收完成标志
+//bit14 接收到0x0d
+//bit13~0	 接收到的有效字符
 
 
 void Usart1_GPIO_Init(void);

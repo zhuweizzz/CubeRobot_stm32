@@ -1,34 +1,49 @@
 F1:
 pwm1
+PA5
 初始化后角度：90°
 
 F2：
 pwm2
+PB3
 初始化后角度:  90°
 
 B1:
 pwm3
+PB10
 初始化后角度:  90°
 
 B2：
 pwm4
+PA0
 初始化后角度: 90°
 
 L1：
 pwm7
+PC6
 初始化后角度:  90°
 
 R1: 
 pwm8:
+PC7
 初始化后角度: 90°  
 
 L2:
 pwm5
+PA1
 初始化后角度:  (180 或者 0 度)
 
 R2：
 pwm6
+PA2
 初始化后角度:  (180 或者 0度)
+
+b:OOGGBOWBY
+d:RBWOWOGRB
+u:OYWGYGBYR
+r:YWBWORGGR
+l:WYYBRBOWB
+f:ORGWGRYYR
 
 
 

@@ -14,17 +14,17 @@
 
 #define F1_JD_0 		460			  //0業
 #define F1_JD_90 	1110        //90業
-#define F1_JD_180  1793 				//180業
+#define F1_JD_180  1800 				//180業
 
 #define R1_JD_0    	500	  
-#define R1_JD_90    1166
-#define R1_JD_180   1866
+#define R1_JD_90    1200
+#define R1_JD_180   1886
 
-#define B1_JD_0    500
-#define B1_JD_90   1120
+#define B1_JD_0    490
+#define B1_JD_90   1110
 #define B1_JD_180  1810
 
-#define L1_JD_0			500
+#define L1_JD_0			490
 #define L1_JD_90		1110
 #define L1_JD_180		1788
 
@@ -32,24 +32,26 @@
 
 
 #define F2_JD_0     500
-#define F2_JD_90 		1166
+#define F2_JD_90 		1300
 #define F2_JD_180 	1833
 
 #define R2_JD_0    	500		  
-#define R2_JD_90   1166
-#define R2_JD_180  1833
+#define R2_JD_90   1800
+#define R2_JD_180  2400
 
-#define B2_JD_0    500
-#define B2_JD_90   1430
+#define B2_JD_0    490
+#define B2_JD_90   1600
 #define B2_JD_180  2400
 
 #define L2_JD_0			500
-#define L2_JD_90		1166
+#define L2_JD_90		1400
 #define L2_JD_180		1833
 
 
 
 void Motor_Init(void);
+
+void Motor_reset(void);
 
 void Motor_ctrl(u8 flag);
 

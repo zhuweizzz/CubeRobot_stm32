@@ -36,9 +36,10 @@
 ..\obj\main.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\main.o: ..\HARDWARE\SYSTICK\systick.h
 ..\obj\main.o: ..\HARDWARE\USART\usart1.h
-..\obj\main.o: ..\HARDWARE\CUBE\pwm1.h
+..\obj\main.o: ..\HARDWARE\ROBOT\robotctrl.h
 ..\obj\main.o: ..\HARDWARE\ROBOT\robot.h
 ..\obj\main.o: ..\HARDWARE\CUBE\motor.h
+..\obj\main.o: ..\HARDWARE\CUBE\pwm1.h
 ..\obj\main.o: ..\HARDWARE\CUBE\pwm2.h
 ..\obj\main.o: ..\HARDWARE\CUBE\pwm3.h
 ..\obj\main.o: ..\HARDWARE\CUBE\pwm4.h

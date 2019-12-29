@@ -10,13 +10,13 @@
 void Robot_Init()
 {
 	Motor_Initialization();
+	Motor_ctrl(1);
 }
 
 void Robot_Initialization()
 {
 	Robot_Init();
 }
-
 
 
 
@@ -69,31 +69,37 @@ void Robot_Lturn(u8 turn)
 {
 	if(turn==T)
 	{
+		Delay_Ms(dlytime);
 		Motor_L1_Turn(L1_JD_180);
 		Delay_Ms(dlytime);
 		
 	}
 	else if (turn==T_)
 	{
+		Delay_Ms(dlytime);
 		Motor_L1_Turn(L1_JD_0);
 		Delay_Ms(dlytime);
 		
 	}
 	else if(turn==T2)
 	{
+		Delay_Ms(dlytime);
 		Robot_Lback();
 		Delay_Ms(dlytime);
 		Motor_L1_Turn(L1_JD_0);
 		Delay_Ms(dlytime);
 		Robot_Lcatch();
+		Delay_Ms(dlytime);
 		Motor_L1_Turn(L1_JD_180);
 	}	
 	
 	
 	//完成旋转后的复位
+		Delay_Ms(dlytime);
 		Robot_Lback();
 		Delay_Ms(dlytime);
 		Motor_L1_Turn(L1_JD_90);
+		Delay_Ms(dlytime);
 		Robot_Lcatch();
 }
 
@@ -101,29 +107,35 @@ void Robot_Fturn(u8 turn)
 {
 		if(turn==T)
 	{
+		Delay_Ms(dlytime);
 		Motor_F1_Turn(F1_JD_180);
 		Delay_Ms(dlytime);
 		
 	}
 	else if (turn==T_)
 	{
+		Delay_Ms(dlytime);
 		Motor_F1_Turn(F1_JD_0);
 		Delay_Ms(dlytime);
 	}
 	else if(turn==T2)
 	{
+		Delay_Ms(dlytime);
 		Robot_Fback();
 		Delay_Ms(dlytime);
 		Motor_F1_Turn(F1_JD_0);
 		Delay_Ms(dlytime);
 		Robot_Fcatch();
+		Delay_Ms(dlytime);
 		Motor_F1_Turn(F1_JD_180);
 	}	
 	
-	//旋转后的复位		
+	//旋转后的复位
+		Delay_Ms(dlytime);
 		Robot_Fback();
 		Delay_Ms(dlytime);
 		Motor_F1_Turn(F1_JD_90);
+		Delay_Ms(dlytime);
 		Robot_Fcatch();
 }
 
@@ -131,29 +143,35 @@ void Robot_Rturn(u8 turn)
 {
 		if(turn==T)
 	{
+		Delay_Ms(dlytime);
 		Motor_R1_Turn(R1_JD_180);
 		Delay_Ms(dlytime);
 	}
 	else if (turn==T_)
 	{
+		Delay_Ms(dlytime);
 		Motor_R1_Turn(R1_JD_0);
 		Delay_Ms(dlytime);
 	}
 	else if(turn==T2)
 	{
+		Delay_Ms(dlytime);
 		Robot_Rback();
 		Delay_Ms(dlytime);
 		Motor_R1_Turn(R1_JD_0);
 		Delay_Ms(dlytime);
 		Robot_Rcatch();
+		Delay_Ms(dlytime);
 		Motor_R1_Turn(R1_JD_180);
 	}	
 	
 	
 	//旋转后的复位
+		Delay_Ms(dlytime);
 		Robot_Rback();
 		Delay_Ms(dlytime);
 		Motor_R1_Turn(R1_JD_90);
+	  Delay_Ms(dlytime);
 		Robot_Rcatch();
 }
 
@@ -161,48 +179,55 @@ void Robot_Bturn(u8 turn)
 {
 		if(turn==T)
 	{
+		Delay_Ms(dlytime);
 		Motor_B1_Turn(B1_JD_180);
 		Delay_Ms(dlytime);
 	}
 	else if (turn==T_)
 	{
+		Delay_Ms(dlytime);
 		Motor_B1_Turn(B1_JD_0);
 		Delay_Ms(dlytime);
 	}
 	else if(turn==T2)
 	{
+		Delay_Ms(dlytime);
 		Robot_Bback();
 		Delay_Ms(dlytime);
 		Motor_B1_Turn(B1_JD_0);
 		Delay_Ms(dlytime);
 		Robot_Bcatch();
+		Delay_Ms(dlytime);
 		Motor_B1_Turn(B1_JD_180);
 	}		
 	
 	
 	//旋转后的复位
+  	Delay_Ms(dlytime);
 		Robot_Bback();
 		Delay_Ms(dlytime);
 		Motor_B1_Turn(B1_JD_90);
+ 	  Delay_Ms(dlytime);
 		Robot_Bcatch();
 }
 
 void Robot_getUDface()  //姿态调整 将U D面 换到BF 面
 {
+	Delay_Ms(dlytime);
 	Robot_Bback();
 	Robot_Fback();
 	Delay_Ms(dlytime);
 	Motor_L1_Turn(L1_JD_180);
-	Motor_R1_Turn(R1_JD_180);
+	Motor_R1_Turn(R1_JD_0);
 	Delay_Ms(dlytime);
 	Robot_Bcatch();
 	Robot_Fcatch();
-	
+	Delay_Ms(dlytime);
 	Robot_Lback();
 	Robot_Rback();
   Delay_Ms(dlytime);
 	Motor_L1_Turn(L1_JD_90);
-	Motor_R1_Turn(L1_JD_90);
+	Motor_R1_Turn(R1_JD_90);
 	Delay_Ms(dlytime);
 	Robot_Lcatch();
 	Robot_Rcatch();
@@ -210,20 +235,21 @@ void Robot_getUDface()  //姿态调整 将U D面 换到BF 面
 
 void  Robot_reUDface()  //姿态调整   还原 U D 面
 {
+	Delay_Ms(dlytime);
 	Robot_Bback();
 	Robot_Fback();
 	Delay_Ms(dlytime);
 	Motor_L1_Turn(L1_JD_0);
-	Motor_R1_Turn(R1_JD_0);
+	Motor_R1_Turn(R1_JD_180);
 	Delay_Ms(dlytime);
 	Robot_Bcatch();
 	Robot_Fcatch();
-	
+	Delay_Ms(dlytime);
 	Robot_Lback();
 	Robot_Rback();
   Delay_Ms(dlytime);
 	Motor_L1_Turn(L1_JD_90);
-	Motor_R1_Turn(L1_JD_90);
+	Motor_R1_Turn(R1_JD_90);
 	Delay_Ms(dlytime);
 	Robot_Lcatch();
 	Robot_Rcatch();

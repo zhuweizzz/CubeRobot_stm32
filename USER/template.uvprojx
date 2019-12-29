@@ -539,6 +539,11 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\ROBOT\robot.c</FilePath>
             </File>
+            <File>
+              <FileName>robotctrl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\ROBOT\robotctrl.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

@@ -12,8 +12,10 @@ void Motor_Init(void)
 	PWM6_Initialization();
 	PWM7_Initialization();
 	PWM8_Initialization();  //完成基本定时器的初始化
-	
-	
+}
+
+void Motor_reset()
+{
 	PWM1_SetScale(F1_JD_90);
   PWM2_SetScale(F2_JD_90);
 	PWM3_SetScale(B1_JD_90);
@@ -22,8 +24,8 @@ void Motor_Init(void)
 	PWM6_SetScale(R2_JD_0);
 	PWM7_SetScale(L1_JD_90);
 	PWM8_SetScale(R1_JD_90);
-	
 }
+
 
 void Motor_ctrl(u8 flag)
 {
@@ -41,6 +43,7 @@ void Motor_ctrl(u8 flag)
 void Motor_Initialization(void)
 {
 	Motor_Init();
+	Motor_reset();
 }
 
 void Motor_L2_Turn(u16 angle)
